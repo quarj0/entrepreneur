@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import authorsData from "./authorsData"; // Assuming you have the authors data in a separate file
+import authorsData from "./data/authorsData"; // Assuming you have the authors data in a separate file
 
 const Dashboard = () => {
   const [selectedAuthor, setSelectedAuthor] = useState(null);

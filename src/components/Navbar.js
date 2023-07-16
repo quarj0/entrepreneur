@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+import HomePage from "./Home";
+import RegistrationForm from "./Register";
+import Login from "./Login";
 
 const Navbar = ({ isLoggedIn, authorsData, onAuthorSelect }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [, setSearchResults] = useState([]);
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
@@ -34,9 +38,9 @@ const Navbar = ({ isLoggedIn, authorsData, onAuthorSelect }) => {
     return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar scroll
-          </a>
+          <Link className="navbar-brand" to={HomePage}>
+            Stong Ties
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -68,14 +72,14 @@ const Navbar = ({ isLoggedIn, authorsData, onAuthorSelect }) => {
             </form>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={RegistrationForm}>
                   Register
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={Login}>
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -87,8 +91,8 @@ const Navbar = ({ isLoggedIn, authorsData, onAuthorSelect }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar scroll
+        <a className="navbar-brand" href="/">
+          UniService
         </a>
         <button
           className="navbar-toggler"
