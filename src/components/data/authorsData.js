@@ -62,63 +62,63 @@ const authorsData = [
   },
   {
     id: 6,
-    name: "Godfred Mensah",
+    name: "Godfred Asiamah",
     image: "path/to/image2.jpg",
-    services: ["Network Engineer"],
+    services: ["Network Engineer", "Microsoft Office Expert"],
     contact: {
       email: "godfred@example.com",
-      phone: "+1234567890",
+      phone: "+233 851 1056",
       website: "https://godfred.com",
     },
     rating: 4.8,
   },
 
-    {
+  {
     id: 7,
     name: "Richard Justice Doe",
     image: "path/to/image1.jpg",
     services: ["Hardware Engineer"],
     contact: {
-        email: "doe@example.com",
-        phone: "+1234567890",
-        website: "https://richdoe.com",
+      email: "doe@example.com",
+      phone: "+1234567890",
+      website: "https://richdoe.com",
     },
     rating: 4.9,
-    },
-    {
+  },
+  {
     id: 8,
     name: "Samuel Nartey",
     image: "path/to/image2.jpg",
-    services: ["Web Developer", "Video Editor"],
+    services: ["Web Developer", "Video Editor", "UI/UX Designer"],
     contact: {
-        email: "samuel@nartey.com",
-        phone: "+1234567890",
-        website: "https://kwameadu.com",
+      email: "samuel@nartey.com",
+      phone: "+1234567890",
+      website: "https://kwameadu.com",
     },
-    rating: 4.9,
-    },
-    {
+    rating: 4.7,
+  },
+  {
     id: 9,
     name: "Frederick Akwafo",
     image: "path/to/image1.jpg",
     services: ["Graphic Designer"],
     contact: {
-        email: "fred@freak.com",
-        phone: "+1234567890",
-        website: "https://fred@ak.com",
+      email: "fred@freak.com",
+      phone: "+1234567890",
+      website: "https://fred@ak.com",
     },
     rating: 4.9,
-    },
-    {
+  },
+  {
     id: 10,
     name: "Maxwell Adinavi",
     image: "path/to/image2.jpg",
     services: ["Graphic Designer"],
     contact: {
-        email: "max@max.com",
-        phone: "+1234567890",
-        website: "https://maxadiv.com",
+      email: "max@max.com",
+      phone: "+1234567890",
+      website: "https://maxadiv.com",
     },
     rating: 4.4,
-    },
+  },
 ];

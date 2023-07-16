@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Navbar = ({ isLoggedIn, authorsData }) => {
+const Navbar = ({ isLoggedIn, authorsData, onAuthorSelect }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -20,13 +20,13 @@ const Navbar = ({ isLoggedIn, authorsData }) => {
     event.preventDefault();
     // Perform any additional search operations if needed
 
-    // Retrieve all data for the matching author
+    // Retrieve the matching author
     const matchingAuthor = authorsData.find(
       (author) => author.name.toLowerCase() === searchQuery.toLowerCase()
     );
     if (matchingAuthor) {
-      // Handle the data for the matching author
-      console.log("Matching author:", matchingAuthor);
+      // Pass the matching author to the parent component
+      onAuthorSelect(matchingAuthor);
     }
   };
 
@@ -34,8 +34,8 @@ const Navbar = ({ isLoggedIn, authorsData }) => {
     return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            Strong Ties
+          <a className="navbar-brand" href="#">
+            Navbar scroll
           </a>
           <button
             className="navbar-toggler"
@@ -68,12 +68,12 @@ const Navbar = ({ isLoggedIn, authorsData }) => {
             </form>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/register">
+                <a className="nav-link" href="#">
                   Register
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/login">
+                <a className="nav-link" href="#">
                   Login
                 </a>
               </li>
@@ -87,8 +87,8 @@ const Navbar = ({ isLoggedIn, authorsData }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          Strong Ties
+        <a className="navbar-brand" href="#">
+          Navbar scroll
         </a>
         <button
           className="navbar-toggler"
